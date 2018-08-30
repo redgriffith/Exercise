@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<meta name="description" content="renouvellement lunette" />
+
+	<title>Je renouvelle mes lunettes</title>
+	
+
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="stylesheet" href="code.css"/>
+	<link rel="stylesheet" href="jquery-ui.min.css"/>
+	
+
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-1.12.1.min.js" type="text/javascript"></script>	
+	<script src="js/readMore.jquery.js" type="text/javascript"></script>	
+
+  
+
+	
+	
+</head>
+
+<body>
+
+
+	<section id="illustration">
+	
+		<div id="disparition" class="close">
+		   <div class="close-x">X</div>
+		</div>
+				
+		
+		
+		<div class="illustration-photo" id="illustration-photo">
+		</div>
+		<div class="illustration-icone">
+			<div class="icone-fond">
+				<span class="icone-bleu"></span>
+			</div>
+
+		</div>
+	</section>
+
+	
+<section id="container">
+	
+	<section id="introduction">
+
+		<h1 class="introduction-title">Je renouvelle mes lunettes</h1>
+		<span class="description">Lorem ipsum dolor sit amet. consectetur adipiscing elit. Sed quis nisi urna.</span>	
+		<span class="progression"></span>
+		
+	</section>
+
+	<section id="questions">
+		<h2 class="questions-title">Mes séances</h2>
+
+		<ul id="accordion">
+		  <li>
+			  <h3>À quel moment changer mes lunettes ?</h3>
+			  <div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			  </div>
+		  </li>
+		  
+		  <li>
+			  <h3>Ai-je besoin d'une consultation ?</h3>
+			  <div>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> </div>
+		  </li>
+		  
+		  <li>
+			  <h3>Comment suis-je remboursé ?</h3>
+			  <div>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> </div>
+		  </li>
+		  
+		   <li>
+			  <h3>Trouver un opticien</h3>
+			  <div>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> </div>
+		  </li> 
+		  
+			<li>
+			  <h3>Choisir mes lunettes</h3>
+			  <div>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> </div>
+		  </li>  
+		  
+		</ul>
+		
+		
+		
+		
+	</section>
+
+	<aside id="recommandations">
+
+		<h2 class="recommandations-title">Articles similaires</h2>
+		
+		<div class="scrolling-contenu">
+		
+		  <article class="reco">
+		  <img src="img/Illustration-1.jpg" alt="Illustration 1">
+		  <span class="progression progression-yellow"></span>
+		  <h3>Devenir un consommateur averti</h3>
+		  </article>
+		  
+		  <article class="reco">
+		  <img src="img/Illustration-2.jpg" alt="Illustration 2">
+		  <span class="progression progression-vide"></span>
+		  <h3>Prévention carries</h3>
+		  </article>
+		  
+		  <article class="reco">
+		  <img src="img/Illustration-3.jpg" alt="Illustration 3">
+		  <span class="progression progression-verte"></span>
+		  <h3>Soins courants chez le dentiste</h3>
+		  </article>
+		  
+		  <article class="reco">
+		  <img src="img/Illustration-4.jpg" alt="Illustration 4">
+		  <span class="progression progression-vide"></span>
+		  <h3>Maintenir le coeur en activité, astuces</h3>
+		  </article>
+
+		</div>
+		
+	</aside>
+
+
+<script>
+  
+  //ACCORDEON INITIALISATION
+  
+  $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      active: false
+    });
+  } );
+  
+   //MASQUER L'ILLUSTRATION
+
+ jQuery(document).ready(function(){
+
+    $("#disparition").click(function(){
+        $(".illustration-photo").fadeOut( "slow" );
+		$(".illustration-icone").fadeOut( "slow" );
+		$(this).fadeOut( "slow" );
+	});
+
+ });
+ 
+    //GESTION CESURE MULTILIGNE
+	
+ $("article h3").readMore({numberOfLines: 2});
+
+</script>
+	
+
+
+</body>
+
+</html>

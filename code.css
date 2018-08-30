@@ -1,0 +1,568 @@
+début html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: blanc;
+  color: #999999;
+  font-family: opensans-regular, arial, sans-serif;
+  margin: auto;
+  padding: auto;
+  font-size: 14px;
+}
+article {
+  cursor: pointer;
+}
+@font-face {
+  font-family: 'opensans-bold-italic';
+  src: url('fonts/OpenSans-BoldItalic.eot');
+  src: url('fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-BoldItalic.woff') format('woff'), url('fonts/OpenSans-BoldItalic.ttf') format('truetype'), url('fonts/OpenSans-BoldItalic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-bold';
+  src: url('fonts/OpenSans-Bold.eot');
+  src: url('fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Bold.woff') format('woff'), url('fonts/OpenSans-Bold.ttf') format('truetype'), url('fonts/OpenSans-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-extra-bold-italic';
+  src: url('fonts/OpenSans-ExtraBoldItalic.eot');
+  src: url('fonts/OpenSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-ExtraBoldItalic.woff') format('woff'), url('fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype'), url('fonts/OpenSans-ExtraBoldItalic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-extra-bold';
+  src: url('fonts/OpenSans-ExtraBold.eot');
+  src: url('fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-ExtraBold.woff') format('woff'), url('fonts/OpenSans-ExtraBold.ttf') format('truetype'), url('fonts/OpenSans-ExtraBold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-italic';
+  src: url('fonts/OpenSans-Italic.eot');
+  src: url('fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Italic.woff') format('woff'), url('fonts/OpenSans-Italic.ttf') format('truetype'), url('fonts/OpenSans-Italic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-light-italic';
+  src: url('fonts/OpenSans-LightItalic.eot');
+  src: url('fonts/OpenSans-LightItalic.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-LightItalic.woff') format('woff'), url('fonts/OpenSans-LightItalic.ttf') format('truetype'), url('fonts/OpenSans-LightItalic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-light';
+  src: url('fonts/OpenSans-Light.eot');
+  src: url('fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Light.woff') format('woff'), url('fonts/OpenSans-Light.ttf') format('truetype'), url('fonts/OpenSans-Light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-regular';
+  src: url('fonts/OpenSans-Regular.eot');
+  src: url('fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Regular.woff') format('woff'), url('fonts/OpenSans-Regular.ttf') format('truetype'), url('fonts/OpenSans-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-semi-bold-italic';
+  src: url('fonts/OpenSans-SemiboldItalic.eot');
+  src: url('fonts/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-SemiboldItalic.woff') format('woff'), url('fonts/OpenSans-SemiboldItalic.ttf') format('truetype'), url('fonts/OpenSans-SemiboldItalic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensans-semi-bold';
+  src: url('fonts/OpenSans-Semibold.eot');
+  src: url('fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Semibold.woff') format('woff'), url('fonts/OpenSans-Semibold.ttf') format('truetype'), url('fonts/OpenSans-Semibold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#introduction {
+  padding: 25px 15px 25px 35px;
+}
+#introduction .introduction-title {
+  font-size: 32px;
+  display: block;
+  color: #0f1516;
+  font-family: opensans-semi-bold;
+}
+#introduction .description {
+  margin-top: 10px;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  color: #707070;
+}
+#illustration {
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#illustration .close {
+  top: 22px;
+  left: 22px;
+  position: absolute;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border: 8px solid #ffffff;
+  border-radius: 50px;
+  z-index: 2;
+  background-color: #ffffff;
+  overflow: visible;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#illustration .close:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #3a92e9;
+  border: 1px solid #ffffff;
+  width: 50px;
+  height: 50px;
+}
+#illustration .close:hover .close-x {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+#illustration .close-x {
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #3a92e9;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
+  font-family: opensans-light, arial, sans-serif;
+  padding-top: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#illustration .illustration-photo {
+  height: 340px;
+  width: auto;
+  min-width: 360px;
+  background-color: #3a92e9;
+  background-image: url(img/Hero.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  z-index: -1;
+}
+#illustration .illustration-icone .icone-fond {
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 315px;
+  right: 20px;
+  border-radius: 2px;
+  -moz-box-shadow: 2px 2px 3px 1px #cfcfcf;
+  -webkit-box-shadow: 2px 2px 3px 1px #cfcfcf;
+  -o-box-shadow: 2px 2px 3px 1px #cfcfcf;
+  box-shadow: 2px 2px 3px 1px #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=134, Strength=3);
+}
+#illustration .illustration-icone .icone-fond .icone-bleu {
+  display: block;
+  position: relative;
+  width: 5px;
+  height: 10px;
+  padding: 5px;
+  margin-top: 12px;
+  margin-left: 16px;
+  background-color: #3a92e9;
+  -webkit-mask-image: url(img/Favoris.svg);
+  mask-image: url(img/Favoris.svg);
+}
+#questions {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 25px 15px 25px 35px;
+}
+#questions ul {
+  counter-reset: compteur;
+}
+#questions ul h3:before {
+  content: counter(compteur);
+  counter-increment: compteur;
+}
+#questions ul h3:after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  background-image: url(img/fleche.svg);
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+#questions h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #e84e6a;
+  padding-bottom: 20px;
+  font-family: opensans-regular;
+}
+#questions h3 {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 60px;
+  font-family: opensans-semi-bold;
+  color: #0f1516;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+  background: #fff !important;
+  margin-right: 0px;
+  outline: none;
+  border: 0px;
+}
+#questions h3:before {
+  border-radius: 50%;
+  width: 15px;
+  background: #fff;
+  border: 1px solid #e84e6a;
+  color: #e84e6a;
+  text-align: center;
+  font: 12px Arial, sans-serif;
+  position: relative;
+  padding: 8px;
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+#questions .ui-state-active:before {
+  background: #e84e6a;
+  color: #ffffff;
+  border: 1px solid #e84e6a;
+  content: '\2713';
+  font-weight: bold;
+}
+#questions .ui-state-active:after {
+  background-image: url(img/fleche-on.svg);
+}
+#questions .ui-state-hover {
+  background: #fef5f6 !important;
+  border-radius: 5px !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #e84e6a !important;
+}
+#questions .ui-accordion-content {
+  overflow: initial !important;
+}
+#questions .ui-icon {
+  display: none;
+}
+#questions ul li {
+  color: #0f1516;
+  position: relative;
+}
+#questions ul li div {
+  color: #999999;
+  padding-left: 60px;
+}
+#questions p {
+  padding-bottom: 20px;
+}
+#recommandations {
+  padding: 25px 15px 25px 35px;
+}
+#recommandations h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #3a92e9;
+  padding-bottom: 20px;
+  font-family: opensans-regular;
+}
+#recommandations .scrolling-contenu {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+#recommandations .scrolling-contenu .reco {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 110px;
+  vertical-align: middle;
+  padding: 15px;
+}
+#recommandations .scrolling-contenu .reco:hover {
+  background: #3a92e9;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#recommandations .scrolling-contenu .reco:hover h3 {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#recommandations .scrolling-contenu .reco img {
+  display: block;
+}
+#recommandations .scrolling-contenu .reco h3 {
+  line-height: 16px;
+  word-wrap: normal;
+  white-space: normal;
+  width: 110px;
+  font-family: opensans-semi-bold;
+  color: #0f1516;
+  margin-top: 10px;
+}
+.progression {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 6px;
+  margin-top: 15px;
+  background-color: #d9d9d9;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+}
+.progression:before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 80%;
+  height: 6px;
+  background: #99cc00;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+}
+.progression-yellow:before {
+  width: 100%;
+  background: #fcca00;
+}
+.progression-verte:before {
+  width: 10%;
+  background: #99cc00;
+}
+.progression-vide {
+  width: 0%;
+  background-color: #ffffff;
+}
+.progression-vide:before {
+  display: none;
+}
+.ui-state-default {
+  border: 0px !important;
+  background: none !important;
+}
+.ui-widget-content {
+  border: 0px !important;
+}
+.ui-state-focus {
+  border: 0px !important;
+}
+@media screen and (min-width: 850px) {
+  #illustration .icone-fond {
+    right: 10% !important;
+    width: 75px !important;
+    height: 75px !important;
+    top: 140px !important;
+  }
+  #illustration .icone-fond .icone-bleu {
+    width: 18px !important;
+    height: 27px !important;
+    margin-top: 18px !important;
+    margin-left: 24px !important;
+  }
+  #illustration .illustration-photo {
+    height: 170px;
+    background-position: right -40px;
+  }
+  #introduction,
+  #questions,
+  #recommandations {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  #questions h3 {
+    font-size: 18px;
+  }
+  #introduction {
+    padding: 40px 15px 40px 15px !important;
+  }
+  #introduction .introduction-title {
+    font-size: 40px;
+  }
+  #introduction .description {
+    font-size: 16px;
+  }
+  #questions h2,
+  #recommandations h2 {
+    font-size: 24px;
+  }
+  #questions ul li div {
+    font-size: 16px;
+  }
+  #recommandations img {
+    width: 100%;
+    height: auto;
+  }
+  #recommandations .scrolling-contenu {
+    white-space: inherit;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  #recommandations .scrolling-contenu .reco {
+    width: 170px;
+  }
+  #recommandations .scrolling-contenu .reco h3 {
+    font-size: 18px;
+    line-height: 20px;
+    width: 170px !important;
+  }
+}
+@media screen and (min-width: 500px) {
+  .illustration-photo {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    width: 32px;
+    height: 32px;
+  }
+  .close {
+    right: 25px !important;
+    left: auto !important;
+  }
+}
